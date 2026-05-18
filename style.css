@@ -1,0 +1,1094 @@
+KW/*
+ * Roots Corporate Website
+ * Design System and Styling
+ */
+
+/* Tipografía de Google Fonts (Poppins para UI/Texto) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Fuentes Custom (RoxboroughCF y Tan pearl) - Requieren archivos locales en /fonts */
+@font-face {
+    font-family: 'RoxboroughCF';
+    src: url('fonts/RoxboroughCF-Regular.woff2') format('woff2'),
+         url('fonts/RoxboroughCF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Core Web Vitals: Prevenir FOIT */
+}
+
+@font-face {
+    font-family: 'RoxboroughCF';
+    src: url('fonts/RoxboroughCF-Bold.woff2') format('woff2'),
+         url('fonts/RoxboroughCF-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tan pearl';
+    src: url('fonts/TAN-PEARL.woff2') format('woff2'),
+         url('fonts/TAN-PEARL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Sistema de Diseño: Variables Globales */
+:root {
+    /* Paleta de Colores (Brand Guidelines) */
+    --color-primary: #346569;     /* Verde/Teal oscuro: Navegación, CTAs, confianza */
+    --color-earth-dark: #9fa291;  /* Tono tierra oscuro: Fondos secundarios, contraste */
+    --color-earth-light: #dfd1c4; /* Tono tierra claro: Tarjetas, bloques de servicios */
+    --color-gray-dark: #c0c9c8;   /* Gris medio: Bordes, divisiones, textos secundarios */
+    --color-gray-light: #e6ddde;  /* Gris muy claro: Fondos generales, respiro visual */
+
+    /* Tipografía */
+    --font-heading: 'RoxboroughCF', serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-logo: 'Tan pearl', serif;
+
+    /* Espaciado y Layout (Grid de 8px base) */
+    --container-max-width: 1200px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Bordes (Solidez corporativa) */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+/* ==========================================================================
+   CSS Reset & Base
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bloqueo estricto de desbordes horizontales */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    color: #2b2b2b; /* Alto contraste para lectura técnica */
+    background-color: var(--color-gray-light);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* Optimización Core Web Vitals: Cero CLS en multimedia */
+img, video, picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.border-radius-sm {
+    border-radius: var(--radius-sm);
+}
+
+
+/* ==========================================================================
+   Utilidades Estructurales
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+/* ==========================================================================
+   Componentes Globales
+   ========================================================================== */
+/* Contenedor del Logo Combinado (Imagotipo) */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Separación elegante entre el ícono y las letras */
+    text-decoration: none;
+}
+
+/* Control estricto del tamaño del Ícono (Monograma) */
+.brand-logo .logo-icon {
+    max-height: 48px; /* Tamaño base corporativo */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Control estricto del tamaño de las Letras */
+.brand-logo .logo-text {
+    max-height: 22px; /* Las letras deben ser visualmente más pequeñas en alto que el ícono */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #234749; /* Darker primary for hover */
+    color: #fff;
+}
+
+/* ==========================================================================
+   Layout B2B Modular
+   ========================================================================== */
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.85); /* Blanco semi-transparente */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: var(--spacing-sm) 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.main-nav a {
+    font-weight: 500;
+}
+
+/* Componente 1: Hero */
+.hero {
+    position: relative;
+    padding: 10rem 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay para contraste de texto B2B */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 101, 105, 0.75); /* --color-primary con opacidad */
+    z-index: -1;
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Tipografía fluida */
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Componente 2: Tríada de Valor */
+.value-triad {
+    background-color: #fff;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.value-card {
+    background-color: var(--color-earth-light);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border-top: 4px solid var(--color-primary); /* Elemento de solidez técnica */
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card p {
+    color: #4a4a4a;
+}
+
+/* Componente 3: Servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--color-gray-dark);
+}
+
+.service-card img {
+    width: 100%;
+    aspect-ratio: 16/9; /* Core Web Vitals: Mantiene el layout estable */
+    object-fit: cover;
+}
+
+.service-card-content {
+    padding: var(--spacing-sm);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+}
+
+/* Componente 4: Formulario de Cotización */
+.quote-section {
+    background-color: var(--color-earth-dark);
+}
+
+.quote-section h2, .quote-section > .container > p {
+    color: #fff;
+    text-align: center;
+}
+
+.quote-wrapper {
+    background-color: #fff;
+    color: #333;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    max-width: 800px;
+    margin: var(--spacing-md) auto 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.quote-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.quote-form .form-group {
+    flex: 1 1 calc(50% - var(--spacing-md));
+    min-width: 250px;
+}
+
+.form-group-full {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(52, 101, 105, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.site-footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: var(--spacing-md) 0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Nuevas Clases Corporativas (Refactorización)
+   ========================================================================== */
+
+/* Filas Alternas (Servicios) */
+.service-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.service-row-image, .service-row-content {
+    flex: 1 1 500px;
+}
+
+.service-row-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.service-row-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.service-row-content ul {
+    list-style: none;
+    margin-top: var(--spacing-md);
+}
+
+.service-row-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.service-row-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+/* Banner Ambiental */
+.eco-banner {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.eco-banner h2 {
+    color: #fff;
+    margin-bottom: var(--spacing-sm);
+}
+
+.eco-banner p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Grid del Equipo */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto var(--spacing-sm);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--color-earth-light);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.team-member span {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Redes Sociales (Omnicanal) */
+.social-icons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--color-primary);
+    border: 1px solid var(--color-gray-dark);
+    transition: all 0.3s ease;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Diferenciales */
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.diff-item {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: #fff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.diff-item h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Showcase de Obras Realizadas
+   ========================================================================== */
+.project-showcase {
+    background-color: #fff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    aspect-ratio: 4/3;
+    cursor: pointer;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 101, 105, 0.85); /* --color-primary transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-md);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.08);
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-location {
+    font-family: var(--font-body);
+    color: var(--color-earth-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.project-item:hover .project-location,
+.project-item:hover .project-title {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   OPTIMIZACIÓN MÓVIL (Mobile-First & Responsive)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Reducción dinámica de espaciados base */
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3.5rem;
+    }
+
+    /* 2. Ajustes de Tipografía y Layout Base */
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    
+    section { padding: var(--spacing-lg) 0; }
+    .hero { padding: 6rem 0 4rem 0; }
+
+    /* 3. Menú Hamburguesa y Navegación Móvil */
+    .mobile-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--color-primary);
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 1050;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+        width: 100%;
+    }
+
+    .main-nav a {
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-nav .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Overlay oscuro cuando el menú está abierto */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 990; /* Corregido: ahora está por debajo del header (1000) */
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .menu-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* 4. Ajustes de Componentes B2B (Touch-friendly) */
+    .service-row, .service-row-reverse {
+        flex-direction: column !important;
+        gap: var(--spacing-md);
+    }
+    
+    .service-row-image, .service-row-content {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%; /* Botones a lo ancho de la pantalla para el pulgar */
+        padding: 1rem;
+    }
+
+    .quote-form .form-group {
+        flex: 1 1 100%; /* Inputs al 100% en móviles */
+    }
+
+    .team-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* 5. Ajustes Obras Showcase */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ocultar botón hamburguesa en escritorio */
+.mobile-toggle { display: none; }
+
+/* ==========================================================================
+   Estilos del Modal de Proyectos (Lightbox)
+   ========================================================================== */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-dialog {
+    background: #fff;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.custom-modal.active .modal-dialog {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.modal-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-image-wrapper {
+    flex: 1 1 50%;
+    min-height: 300px;
+}
+
+.modal-image-wrapper img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.modal-info-wrapper {
+    flex: 1 1 50%;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-subtitle {
+    color: var(--color-earth-dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.modal-specs p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.modal-specs strong {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD DEL MODAL DE PROYECTOS (MÓVIL)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .modal-dialog {
+        width: 95%; /* Ocupa casi toda la pantalla */
+        max-height: 85vh; /* Deja un margen para ver el fondo */
+        overflow-y: auto; /* Permite hacer scroll interno si hay mucho texto */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-grid {
+        display: flex;
+        flex-direction: column; /* Fuerza apilamiento vertical */
+        flex-wrap: nowrap;
+    }
+
+    .modal-image-wrapper {
+        flex: none;
+        width: 100%;
+        height: 220px; /* Altura fija y predecible para la imagen */
+        min-height: 220px;
+    }
+
+    .modal-info-wrapper {
+        flex: none;
+        width: 100%;
+        padding: 1.5rem 1.2rem; /* Respiro lateral y vertical para el texto */
+    }
+
+    /* Ajustes Tipográficos Internos para Móvil */
+    .modal-info-wrapper h3 {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .modal-specs p {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    /* Corrección del botón truncado */
+    .modal-info-wrapper .btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.95rem;
+        white-space: normal; /* Permite que el texto largo baje a dos líneas si es necesario */
+        line-height: 1.4;
+        height: auto;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    /* Ajuste de la 'X' para cerrar en móvil */
+    .close-modal {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+        background: rgba(255,255,255,0.9); /* Asegura contraste sobre cualquier foto */
+    }
+}
+
+/* ==========================================================================
+   Calculadora Interactiva (Lead Magnet)
+   ========================================================================== */
+.calculator-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin-top: var(--spacing-md);
+}
+
+.calc-inputs {
+    flex: 1 1 50%;
+    padding: var(--spacing-lg);
+    background-color: #fff;
+}
+
+.calc-results {
+    flex: 1 1 40%;
+    padding: var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calc-results h3 {
+    color: var(--color-earth-light);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 0.5rem;
+}
+
+.result-box {
+    background: rgba(0,0,0,0.15);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.result-value {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: #fff;
+}
+
+.calc-disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .calc-inputs, .calc-results {
+        flex: 1 1 100%;
+        padding: var(--spacing-md);
+    }
+    .result-value {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================================================
+   Efectos de Tarjetas de Financiación
+   ========================================================================== */
+.finance-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+.finance-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    background: #fff !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* ==========================================================================
+   CORRECCIÓN RESPONSIVE PARA PORTFOLIO (style.css)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Grid a 1 columna y espaciado móvil */
+    .project-grid {
+        grid-template-columns: 1fr; /* Una obra por fila */
+        gap: var(--spacing-md); /* Espacio ameno entre obras */
+        padding: 0 var(--spacing-sm); /* Respiro lateral */
+    }
+
+    /* 2. Ajuste del ítem y desactivación de hover transforms */
+    .project-item {
+        border-radius: var(--radius-md);
+        height: 60vw; /* Altura relativa al ancho de pantalla para impacto visual */
+        min-height: 250px;
+    }
+
+    .project-item:hover img {
+        transform: none !important; /* Desactivar zoom en móvil */
+    }
+
+    /* 3. Re-diseño del Overlay para Móvil (Siempre Visible) */
+    .project-overlay {
+        opacity: 1 !important; /* Forzar visibilidad siempre */
+        background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%) !important; /* Degradado oscuro inferior para legibilidad */
+        display: flex;
+        flex-direction: column-reverse; /* Título abajo, ubicación arriba */
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1.5rem !important; /* Padding Touch-friendly */
+        transform: translateY(0) !important; /* Sin movimiento */
+    }
+
+    /* Ajuste tipográfico dentro del overlay móvil */
+    .project-overlay span {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+        color: var(--color-earth-light);
+    }
+
+    .project-overlay h3 {
+        font-size: 1.3rem;
+        margin: 0;
+        line-height: 1.2;
+    }
+}
+
+/* ==========================================================================
+   CORRECCIÓN DE LEGIBILIDAD: MISIÓN Y VISIÓN
+   ========================================================================== */
+.mission-vision .value-card {
+    position: relative;
+    overflow: hidden;
+    color: #fff !important;
+    z-index: 1;
+    border: none !important;
+}
+
+.mission-vision .value-card h3,
+.mission-vision .value-card p {
+    color: #fff !important;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8); /* Despega el texto del fondo */
+}
+
+.mission-vision .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 30, 31, 0.65); /* Overlay oscuro basado en --color-primary */
+    z-index: 0;
+    pointer-events: none;
+}

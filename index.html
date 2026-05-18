@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Descriptions para SEO B2B -->
+    <title>Roots | Ingeniería Hídrica y Movimiento de Suelos</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <meta name="description" content="Roots es una empresa de ingeniería especializada en reservorios de agua, sistemas de riego tecnificado y movimiento de suelos para el sector corporativo y agrícola.">
+    
+    <!-- Open Graph y Twitter Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tudominio-roots.com.ar/">
+    <meta property="og:title" content="Roots | Ingeniería Hídrica y Movimiento de Suelos">
+    <meta property="og:description" content="Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos hídricos en la región de Cuyo.">
+    <meta property="og:image" content="https://www.tudominio-roots.com.ar/img/og-roots.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roots | Ingeniería Hídrica y Movimiento de Suelos">
+    <meta name="twitter:description" content="Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos hídricos en la región de Cuyo.">
+    <meta name="twitter:image" content="https://www.tudominio-roots.com.ar/img/og-roots.png">
+    
+    <!-- CSS y Variables -->
+    <link rel="stylesheet" href="style.css?v=2.0">
+</head>
+<body>
+    <!-- Encabezado Corporativo Multidireccional -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo">
+                <img src="img/logo/roots_logo.png" alt="Roots Isotipo" class="logo-icon">
+                <img src="img/logo/roots-logo-letras.png" alt="Roots Logotipo" class="logo-text">
+            </a>
+            <button class="mobile-toggle" aria-label="Abrir menú de navegación">☰</button>
+            <!-- Navegación B2B -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="valor-agregado.html">Valor Agregado</a></li>
+                    <li><a href="nuestra-empresa.html">Nuestra Empresa</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="menu-overlay"></div>
+
+    <main>
+        <!-- Componente: Hero -->
+        <!-- Componente: Hero -->
+        <section class="hero" id="inicio">
+            <div class="hero-bg">
+                <img src="img/index/principal.webp" alt="Ingeniería Hídrica Roots - Obras de Gran Escala" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="hero-content container">
+                <h1>Ingeniería Hídrica de Precisión y Movimiento de Suelos</h1>
+                <p>Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos.</p>
+                <a href="contacto.html" class="btn btn-primary">Iniciá tu proyecto</a>
+            </div>
+        </section>
+
+        <!-- Calculadora de Reservorios (Lead Magnet) -->
+        <section class="calculator-section" style="padding: var(--spacing-xl) 0; background-color: var(--color-gray-light);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--spacing-lg);">
+                    <h2>Proyectá tu reservorio en segundos</h2>
+                    <p>Utilizá nuestra herramienta de estimación rápida para conocer el volumen y las dimensiones ideales para tu cultivo.</p>
+                </div>
+                
+                <div class="calculator-grid">
+                    <div class="calc-inputs">
+                        <div class="form-group-full">
+                            <label class="form-label" for="calc-hectareas">Superficie a Regar (Hectáreas)</label>
+                            <input type="number" id="calc-hectareas" class="form-control" min="1" step="1" value="10">
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label" for="calc-cultivo">Tipo de Cultivo (Demanda Hídrica)</label>
+                            <select id="calc-cultivo" class="form-control">
+                                <option value="40">Vid / Viñedos (Demanda Baja)</option>
+                                <option value="50">Olivos (Demanda Media)</option>
+                                <option value="70">Frutales de Carozo (Demanda Alta)</option>
+                                <option value="90">Hortícolas (Demanda Muy Alta)</option>
+                            </select>
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label" for="calc-profundidad">Profundidad del Reservorio (Metros)</label>
+                            <input type="number" id="calc-profundidad" class="form-control" min="1" step="0.5" value="4">
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label" for="calc-horas">Horas de Riego por Turno</label>
+                            <input type="number" id="calc-horas" class="form-control" min="1" step="1" value="12">
+                        </div>
+                    </div>
+
+                    <div class="calc-results">
+                        <h3>Estimación del Proyecto</h3>
+                        <div class="result-box">
+                            <span class="result-label">Volumen Requerido:</span>
+                            <span class="result-value" id="res-volumen">0 m³</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-label">Espejo de Agua (Aprox):</span>
+                            <span class="result-value" id="res-dimensiones">0m x 0m</span>
+                        </div>
+                        <p class="calc-disclaimer">*Cálculo estimado basado en fórmulas agronómicas estándar. No reemplaza la ingeniería de detalle.</p>
+                        
+                        <a href="contacto.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; font-size: 1.1rem; padding: 1.2rem;">Solicitar Presupuesto Exacto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Quiénes Somos -->
+        <section class="about-summary">
+            <div class="container">
+                <div style="max-width: 800px;">
+                    <h2>Expertos en el Terreno</h2>
+                    <p>Con décadas de experiencia en ingeniería hidráulica y civil, Roots se posiciona como el socio estratégico ideal para transformar desafíos geográficos en oportunidades productivas.</p>
+                    <a href="nuestra-empresa.html" class="btn" style="border: 1px solid var(--color-primary); margin-top: var(--spacing-sm);">Conocer más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Componente: Tríada de Valor -->
+        <section class="value-triad" id="valor" style="background-color: #fff;">
+            <div class="container">
+                <div class="grid-3-col">
+                    <article class="value-card">
+                        <h3>Disponibilidad de Agua</h3>
+                        <p>Aseguramos el recurso hídrico vital para tu productividad constante mediante el diseño de reservorios estratégicos.</p>
+                    </article>
+                    <article class="value-card">
+                        <h3>Productividad Agrícola</h3>
+                        <p>Diseñamos sistemas de riego inteligente que maximizan el rendimiento por hectárea y la eficiencia en insumos.</p>
+                    </article>
+                    <article class="value-card">
+                        <h3>Resiliencia Corporativa</h3>
+                        <p>Ejecutamos movimiento de suelos y obras civiles proyectadas para soportar los desafíos climáticos a largo plazo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Resumen de Servicios -->
+        <section class="services-summary">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Soluciones de Ingeniería</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <h3>Reservorios de Agua</h3>
+                            <p>Ingeniería de precisión en impermeabilización y contención.</p>
+                            <a href="servicios.html" class="btn" style="padding: 0; color: var(--color-primary); font-weight: 600;">Ver detalle →</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <h3>Sistemas de Riego</h3>
+                            <p>Tecnificación hídrica por goteo y pivote adaptada.</p>
+                            <a href="servicios.html" class="btn" style="padding: 0; color: var(--color-primary); font-weight: 600;">Ver detalle →</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <h3>Movimiento de Suelos</h3>
+                            <p>Nivelación láser y preparación de terreno eficiente.</p>
+                            <a href="servicios.html" class="btn" style="padding: 0; color: var(--color-primary); font-weight: 600;">Ver detalle →</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <h3>Obras Civiles</h3>
+                            <p>Infraestructura robusta para proyectos integrales.</p>
+                            <a href="servicios.html" class="btn" style="padding: 0; color: var(--color-primary); font-weight: 600;">Ver detalle →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVO COMPROMISO AMBIENTAL -->
+        <section class="eco-banner">
+            <div class="container">
+                <h2>Impacto y Compromiso Ambiental</h2>
+                <p>En Roots, entendemos que el agua es el recurso más valioso de nuestra región. Nuestra ingeniería está diseñada para optimizar cada gota, reducir la erosión del suelo y garantizar que el desarrollo agrícola conviva en armonía con el ecosistema local.</p>
+            </div>
+        </section>
+
+        <!-- Banner Financiación -->
+        <section class="finance-banner" style="padding: 4rem 0; background-color: #fff; border-top: 1px solid var(--color-gray-light);">
+            <div class="container" style="text-align: center;">
+                <span style="color: var(--color-earth-dark); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">Respaldo Financiero</span>
+                <h2 style="color: var(--color-primary); margin: 1rem 0; font-size: 2.5rem;">Potenciá tu infraestructura. Pagala hasta en 36 meses.</h2>
+                <p style="max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.1rem; color: #555;">
+                    Operamos como nexo estratégico para que tu empresa acceda a las mejores líneas de crédito del mercado. Construí hoy, capitalizá mañana.
+                </p>
+                
+                <div class="finance-grid" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                    <div class="finance-item" style="padding: 1.5rem 2rem; border: 1px solid var(--color-gray-light); border-radius: var(--radius-md); background: var(--color-gray-light); min-width: 250px;">
+                        <h4 style="margin: 0; font-family: var(--font-heading); font-size: 1.3rem;">Agro Nación</h4>
+                    </div>
+                    <div class="finance-item" style="padding: 1.5rem 2rem; border: 1px solid var(--color-gray-light); border-radius: var(--radius-md); background: var(--color-gray-light); min-width: 250px;">
+                        <h4 style="margin: 0; font-family: var(--font-heading); font-size: 1.3rem;">PyME Nación</h4>
+                    </div>
+                    <div class="finance-item" style="padding: 1.5rem 2rem; border: 1px solid var(--color-gray-light); border-radius: var(--radius-md); background: var(--color-gray-light); min-width: 250px;">
+                        <h4 style="margin: 0; font-family: var(--font-heading); font-size: 1.3rem;">Fondo de la Transformación</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="final-cta" style="text-align: center; padding: var(--spacing-xl) 0; background-color: var(--color-gray-light);">
+            <div class="container">
+                <h2 style="font-size: 3rem; margin-bottom: var(--spacing-md);">¿Listo para potenciar tu producción?</h2>
+                <p style="margin-bottom: var(--spacing-lg); font-size: 1.2rem;">Hablá con nuestros ingenieros y recibí una propuesta técnica adaptada a tus necesidades.</p>
+                <a href="contacto.html" class="btn btn-primary" style="padding: 1.5rem 3rem; font-size: 1.2rem;">Solicitar Cotización</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <img src="img/logo/roots_logo.png" alt="Roots" style="max-height: 40px; margin: 0 auto 1rem; display: block; opacity: 0.8;">
+            <p>&copy; 2026 Roots - Especialistas en Ingeniería Hídrica y de Suelos. Todos los derechos reservados.</p>
+            <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.5; font-weight: 300;">Diseñado y desarrollado por <strong style="font-weight: 500; letter-spacing: 0.5px;">TB Marketing</strong></p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            const menuOverlay = document.querySelector('.menu-overlay');
+
+            function toggleMenu() {
+                mainNav.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                mobileToggle.innerHTML = mainNav.classList.contains('active') ? '✕' : '☰';
+            }
+
+            mobileToggle.addEventListener('click', toggleMenu);
+            menuOverlay.addEventListener('click', toggleMenu);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Elementos de la calculadora
+            const inputs = [
+                document.getElementById('calc-hectareas'),
+                document.getElementById('calc-cultivo'),
+                document.getElementById('calc-profundidad'),
+                document.getElementById('calc-horas')
+            ];
+            
+            const resVolumen = document.getElementById('res-volumen');
+            const resDimensiones = document.getElementById('res-dimensiones');
+
+            function calcularReservorio() {
+                const hectareas = parseFloat(document.getElementById('calc-hectareas').value) || 0;
+                const factorCultivo = parseFloat(document.getElementById('calc-cultivo').value) || 0;
+                const profundidad = parseFloat(document.getElementById('calc-profundidad').value) || 1; // Evitar división por 0
+                const horas = parseFloat(document.getElementById('calc-horas').value) || 0;
+
+                // Fórmula de estimación (Ficticia/Aproximada para lead magnet)
+                // Volumen = Hectareas * Factor * Horas
+                const volumen = hectareas * factorCultivo * horas;
+                
+                // Área = Volumen / Profundidad
+                const area = volumen / profundidad;
+                
+                // Dimensiones (Raíz cuadrada para hacer un cuadrado aproximado)
+                const lado = Math.sqrt(area);
+
+                // Actualizar UI con formato numérico
+                resVolumen.innerText = volumen.toLocaleString('es-AR', { maximumFractionDigits: 0 }) + ' m³';
+                
+                if(volumen > 0) {
+                    resDimensiones.innerText = lado.toLocaleString('es-AR', { maximumFractionDigits: 1 }) + 'm x ' + lado.toLocaleString('es-AR', { maximumFractionDigits: 1 }) + 'm';
+                } else {
+                    resDimensiones.innerText = '0m x 0m';
+                }
+            }
+
+            // Escuchar cambios en todos los inputs
+            inputs.forEach(input => {
+                if(input) input.addEventListener('input', calcularReservorio);
+            });
+
+            // Cálculo inicial al cargar la página
+            calcularReservorio();
+        });
+    </script>
+</body>
+</html>
