@@ -1,15 +1,15 @@
 {
-  "hero_title": "Ingeniería Hídrica de Alta Precisión",
-  "hero_subtitle": "Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos hídricos en la región de Cuyo.",
-  "hero_btn_text": "Iniciá tu proyecto",
+  "calc_subtitle": "Utilizá nuestra herramienta de estimación rápida para calcular el volumen y los requerimientos de impermeabilización de tu próximo proyecto.",
+  "cta_subtitle": "Hablá con nuestro equipo y recibí una cotización formal estructurada para tu empresa.",
+  "cta_title": "¿Listo para potenciar tu producción?",
   "hero_bg": "/img/index/principal.webp",
   "calc_title": "Proyectá tu reservorio en segundos",
-  "calc_subtitle": "Utilizá nuestra herramienta de estimación rápida para calcular el volumen y los requerimientos de impermeabilización de tu próximo proyecto.",
-  "info_title_1": "Resiliencia Hídrica",
   "info_text_1": "Aseguramos el recurso hídrico vital para tu productividad, independientemente de la variabilidad climática.",
+  "info_text_2": "Potenciá tu infraestructura. Pagala hasta en 36 meses. Construí hoy, capitalizá mañana. Asegurá tu tranquilidad.",
+  "hero_title": "Ingeniería Hídrica de Alta Precisión",
+  "hero_btn_text": "Iniciá tu proyecto",
+  "info_title_1": "Resiliencia Hídrica",
   "info_title_2": "Eficiencia Financiera",
-  "info_text_2": "Potenciá tu infraestructura. Pagala hasta en 36 meses. Construí hoy, capitalizá mañana.",
-  "cta_title": "¿Listo para potenciar tu producción?",
-  "cta_subtitle": "Hablá con nuestros ingenieros y recibí una cotización formal estructurada para tu empresa.",
+  "hero_subtitle": "Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos hídricos en la región de Cuyo.",
   "cta_btn_text": "Solicitar Cotización"
 }
