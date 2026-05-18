@@ -32,7 +32,7 @@ collections:
     label: "Gestión de Páginas"
     delete: false
     files:
-      - title: "Página de Inicio"
+      - label: "Página de Inicio"
         name: "home"
         file: "public/content/home.json"
         fields:
@@ -50,7 +50,7 @@ collections:
           - {label: "CTA Final - Subtítulo", name: "cta_subtitle", widget: "text"}
           - {label: "CTA Final - Texto Botón", name: "cta_btn_text", widget: "string"}
 
-      - title: "Nuestra Empresa"
+      - label: "Nuestra Empresa"
         name: "empresa"
         file: "public/content/empresa.json"
         fields:
@@ -88,7 +88,7 @@ collections:
               - {label: "Título", name: "title", widget: "string"}
               - {label: "Texto", name: "text", widget: "text"}
 
-      - title: "Servicios"
+      - label: "Servicios"
         name: "servicios"
         file: "public/content/servicios.json"
         fields:
@@ -102,7 +102,7 @@ collections:
               - {label: "Descripción", name: "description", widget: "text"}
               - {label: "Imagen descriptiva", name: "image", widget: "image"}
 
-      - title: "Valor Agregado"
+      - label: "Valor Agregado"
         name: "valor_agregado"
         file: "public/content/valor-agregado.json"
         fields:
@@ -146,7 +146,7 @@ collections:
               - {label: "Acción", name: "text", widget: "string"}
           - {label: "Ambiental - Imagen", name: "env_img", widget: "image"}
 
-      - title: "Contacto"
+      - label: "Contacto"
         name: "contacto"
         file: "public/content/contacto.json"
         fields:
