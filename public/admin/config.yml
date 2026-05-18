@@ -28,14 +28,134 @@ media_folder: "public/img"
 public_folder: "/img"
 
 collections:
-  - name: "novedades"
-    label: "Novedades / Obras"
-    folder: "public/content/novedades"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Título de la Obra", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
-      - {label: "Descripción Corta", name: "description", widget: "text"}
-      - {label: "Detalles", name: "body", widget: "markdown"}
+  - name: "paginas"
+    label: "Gestión de Páginas"
+    delete: false
+    files:
+      - title: "Página de Inicio"
+        name: "home"
+        file: "public/content/home.json"
+        fields:
+          - {label: "Sección Hero - Título", name: "hero_title", widget: "string"}
+          - {label: "Sección Hero - Subtítulo", name: "hero_subtitle", widget: "text"}
+          - {label: "Sección Hero - Texto Botón", name: "hero_btn_text", widget: "string"}
+          - {label: "Sección Hero - Imagen", name: "hero_bg", widget: "image"}
+          - {label: "Calculadora - Título", name: "calc_title", widget: "string"}
+          - {label: "Calculadora - Subtítulo", name: "calc_subtitle", widget: "text"}
+          - {label: "Info 1 - Título", name: "info_title_1", widget: "string"}
+          - {label: "Info 1 - Texto", name: "info_text_1", widget: "text"}
+          - {label: "Info 2 - Título", name: "info_title_2", widget: "string"}
+          - {label: "Info 2 - Texto", name: "info_text_2", widget: "text"}
+          - {label: "CTA Final - Título", name: "cta_title", widget: "string"}
+          - {label: "CTA Final - Subtítulo", name: "cta_subtitle", widget: "text"}
+          - {label: "CTA Final - Texto Botón", name: "cta_btn_text", widget: "string"}
+
+      - title: "Nuestra Empresa"
+        name: "empresa"
+        file: "public/content/empresa.json"
+        fields:
+          - {label: "Hero - Título", name: "hero_title", widget: "string"}
+          - {label: "Hero - Subtítulo", name: "hero_subtitle", widget: "text"}
+          - {label: "Historia - Título", name: "history_title", widget: "string"}
+          - {label: "Historia - Texto 1", name: "history_text_1", widget: "text"}
+          - {label: "Historia - Texto 2", name: "history_text_2", widget: "text"}
+          - {label: "Historia - Cita", name: "history_quote", widget: "string"}
+          - {label: "Historia - Imagen", name: "history_img", widget: "image"}
+          - {label: "Misión - Título", name: "mission_title", widget: "string"}
+          - {label: "Misión - Texto", name: "mission_text", widget: "text"}
+          - {label: "Misión - Imagen Fondo", name: "mission_bg", widget: "image"}
+          - {label: "Visión - Título", name: "vision_title", widget: "string"}
+          - {label: "Visión - Texto", name: "vision_text", widget: "text"}
+          - {label: "Visión - Imagen Fondo", name: "vision_bg", widget: "image"}
+          - {label: "Propuestas - Título", name: "prop_title", widget: "string"}
+          - label: "Lista de Propuestas"
+            name: "prop_items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Texto", name: "text", widget: "text"}
+          - {label: "Diferenciales - Título", name: "diff_title", widget: "string"}
+          - label: "Lista de Diferenciales"
+            name: "diff_items"
+            widget: "list"
+            field: {label: "Texto", name: "text", widget: "string"}
+          - {label: "Equipo - Título", name: "team_title", widget: "string"}
+          - {label: "Equipo - Subtítulo", name: "team_subtitle", widget: "text"}
+          - label: "Lista de Áreas"
+            name: "team_items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Texto", name: "text", widget: "text"}
+
+      - title: "Servicios"
+        name: "servicios"
+        file: "public/content/servicios.json"
+        fields:
+          - {label: "Hero - Título", name: "hero_title", widget: "string"}
+          - {label: "Hero - Subtítulo", name: "hero_subtitle", widget: "text"}
+          - label: "Lista de Servicios"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Nombre del Servicio", name: "title", widget: "string"}
+              - {label: "Descripción", name: "description", widget: "text"}
+              - {label: "Imagen descriptiva", name: "image", widget: "image"}
+
+      - title: "Valor Agregado"
+        name: "valor_agregado"
+        file: "public/content/valor-agregado.json"
+        fields:
+          - {label: "Hero - Título", name: "hero_title", widget: "string"}
+          - {label: "Hero - Subtítulo", name: "hero_subtitle", widget: "text"}
+          - {label: "Obras - Título", name: "works_title", widget: "string"}
+          - label: "Lista de Obras"
+            name: "works_items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Ubicación", name: "location", widget: "string"}
+              - {label: "Capacidad", name: "capacity", widget: "string"}
+              - {label: "Descripción", name: "desc", widget: "text"}
+              - {label: "Impacto", name: "impact", widget: "text"}
+              - {label: "Imagen", name: "image", widget: "image"}
+          - {label: "Propuestas - Título", name: "prop_title", widget: "string"}
+          - label: "Lista de Propuestas"
+            name: "prop_items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Descripción", name: "description", widget: "text"}
+              - {label: "Imagen", name: "image", widget: "image"}
+          - {label: "Operaciones - Título", name: "op_title", widget: "string"}
+          - {label: "Operaciones - Texto", name: "op_text", widget: "text"}
+          - {label: "Calidad - Título", name: "quality_title", widget: "string"}
+          - {label: "Calidad - Subtítulo", name: "quality_subtitle", widget: "text"}
+          - label: "Lista de Protocolos"
+            name: "quality_items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Texto", name: "text", widget: "text"}
+          - {label: "Ambiental - Título", name: "env_title", widget: "string"}
+          - label: "Puntos Ambientales"
+            name: "env_items"
+            widget: "list"
+            fields:
+              - {label: "Área", name: "title", widget: "string"}
+              - {label: "Acción", name: "text", widget: "string"}
+          - {label: "Ambiental - Imagen", name: "env_img", widget: "image"}
+
+      - title: "Contacto"
+        name: "contacto"
+        file: "public/content/contacto.json"
+        fields:
+          - {label: "Hero - Título", name: "hero_title", widget: "string"}
+          - {label: "Hero - Subtítulo", name: "hero_subtitle", widget: "text"}
+          - {label: "Información - Título", name: "info_title", widget: "string"}
+          - {label: "Teléfono", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Dirección", name: "address", widget: "text"}
+          - {label: "Horarios", name: "hours", widget: "string"}
+          - {label: "Badge - Título", name: "form_badge_title", widget: "string"}
+          - {label: "Badge - Texto", name: "form_badge_text", widget: "text"}

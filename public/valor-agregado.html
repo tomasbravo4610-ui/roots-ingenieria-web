@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -49,8 +49,8 @@
         <section class="internal-hero" style="padding: var(--spacing-xl) 0; background-color: var(--color-gray-light);">
             <div class="container">
                 <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                    <h1 style="margin-bottom: var(--spacing-md);">El Valor de la Ingeniería Estratégica</h1>
-                    <p style="font-size: 1.25rem; line-height: 1.6; color: var(--color-primary); font-weight: 500;">Frente a la escasez hídrica y la variabilidad climática, el almacenamiento inteligente y la eficiencia ya no son opciones, son imperativos. En Roots, transformamos el desafío del territorio en rentabilidad asegurada para tu negocio.</p>
+                    <h1 data-cms-text="hero_title" style="margin-bottom: var(--spacing-md);">El Valor de la Ingeniería Estratégica</h1>
+                    <p data-cms-text="hero_subtitle" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-primary); font-weight: 500;">Frente a la escasez hídrica y la variabilidad climática, el almacenamiento inteligente y la eficiencia ya no son opciones, son imperativos. En Roots, transformamos el desafío del territorio en rentabilidad asegurada para tu negocio.</p>
                 </div>
             </div>
         </section>
@@ -58,7 +58,7 @@
         <!-- 1.5. Sección: Obras Realizadas -->
         <section class="project-showcase" style="padding: 100px 0;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Ingeniería en Acción: Obras que Transforman el Territorio</h2>
+                <h2 data-cms-text="works_title" style="text-align: center; margin-bottom: var(--spacing-xl);">Ingeniería en Acción: Obras que Transforman el Territorio</h2>
                 <div class="project-grid">
                     <!-- Obra 1 -->
                     <article class="project-item" onclick="openProjectModal(this)" style="cursor: pointer;"
@@ -68,10 +68,10 @@
                          data-capacity="50.000 m3"
                          data-desc="Impermeabilización integral con geomembrana PEAD de 1.5mm. El proyecto incluyó topografía, movimiento de suelos, compactación y obras civiles de ingreso/egreso de agua."
                          data-impact="Antes: Pérdidas por infiltración del 35%. Después: Retención hídrica del 100% y automatización de llenado.">
-                        <img src="img/imagenes-varias/reservorio-lleno.webp" alt="Reservorio Agrícola de Gran Escala en Valle de Uco" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <img src="img/imagenes-varias/reservorio-lleno.webp" data-cms-img="works_items.0.image" alt="Reservorio Agrícola de Gran Escala en Valle de Uco" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="project-overlay">
-                            <span class="project-location">Valle de Uco, Mendoza</span>
-                            <h3 class="project-title">Reservorio Agrícola de Gran Escala</h3>
+                            <span data-cms-text="works_items.0.location" class="project-location">Valle de Uco, Mendoza</span>
+                            <h3 data-cms-text="works_items.0.title" class="project-title">Reservorio Agrícola de Gran Escala</h3>
                         </div>
                     </article>
                     <!-- Obra 2 -->
@@ -82,10 +82,10 @@
                          data-capacity="120 Hectáreas"
                          data-desc="Diseño e instalación de riego por goteo compensado. Incluye automatización de válvulas y sistema de inyección de nutrientes."
                          data-impact="Antes: Riego por manto con baja eficiencia. Después: Incremento del 40% en rendimiento y ahorro del 60% en agua.">
-                        <img src="img/imagenes-varias/finca.webp" alt="Sistema de Riego Tecnificado y Fertirriego en Luján de Cuyo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <img src="img/imagenes-varias/finca.webp" data-cms-img="works_items.1.image" alt="Sistema de Riego Tecnificado y Fertirriego en Luján de Cuyo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="project-overlay">
-                            <span class="project-location">Luján de Cuyo</span>
-                            <h3 class="project-title">Sistema de Riego Tecnificado y Fertirriego</h3>
+                            <span data-cms-text="works_items.1.location" class="project-location">Luján de Cuyo</span>
+                            <h3 data-cms-text="works_items.1.title" class="project-title">Sistema de Riego Tecnificado y Fertirriego</h3>
                         </div>
                     </article>
                     <!-- Obra 3 -->
@@ -96,10 +96,10 @@
                          data-capacity="200.000 m3 movidos"
                          data-desc="Nivelación láser de precisión y ejecución de bases estructurales para planta de procesamiento agroindustrial. Construcción de caminos internos."
                          data-impact="Aseguramiento de estabilidad estructural y cumplimiento de tolerancias milimétricas en plazos reducidos.">
-                        <img src="img/imagenes-varias/reservorio-construccion.webp" alt="Movimiento de Suelos en San Rafael" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <img src="img/imagenes-varias/reservorio-construccion.webp" data-cms-img="works_items.2.image" alt="Movimiento de Suelos en San Rafael" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="project-overlay">
-                            <span class="project-location">San Rafael</span>
-                            <h3 class="project-title">Movimiento de Suelos para Infraestructura Industrial</h3>
+                            <span data-cms-text="works_items.2.location" class="project-location">San Rafael</span>
+                            <h3 data-cms-text="works_items.2.title" class="project-title">Movimiento de Suelos para Infraestructura Industrial</h3>
                         </div>
                     </article>
                 </div>
@@ -109,38 +109,38 @@
         <!-- 2. Sección: La Propuesta de Valor Roots (Filas Alternas) -->
         <section class="value-prop" style="padding: var(--spacing-xl) 0;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Infraestructura que Asegura Rentabilidad</h2>
+                <h2 data-cms-text="prop_title" style="text-align: center; margin-bottom: var(--spacing-xl);">Infraestructura que Asegura Rentabilidad</h2>
                 
                 <!-- Bloque 1 -->
                 <div class="service-row">
                     <div class="service-row-image">
-                        <img src="img/imagenes-varias/reservorio-vacio.webp" alt="Agua Asegurada en Reservorio Agrícola" class="img-responsive border-radius-sm" width="800" height="450" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                        <img src="img/imagenes-varias/reservorio-vacio.webp" data-cms-img="prop_items.0.image" alt="Agua Asegurada en Reservorio Agrícola" class="img-responsive border-radius-sm" width="800" height="450" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
                     </div>
                     <div class="service-row-content">
-                        <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 2rem;">Agua Asegurada</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6;">Reservorios impermeabilizados de alta tecnología que eliminan la dependencia de los turnos de agua y blindan tu producción frente a cortes de suministro.</p>
+                        <h3 data-cms-text="prop_items.0.title" style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 2rem;">Agua Asegurada</h3>
+                        <p data-cms-text="prop_items.0.description" style="font-size: 1.1rem; line-height: 1.6;">Reservorios impermeabilizados de alta tecnología que eliminan la dependencia de los turnos de agua y blindan tu producción frente a cortes de suministro.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 2 -->
                 <div class="service-row service-row-reverse">
                     <div class="service-row-image">
-                        <img src="img/imagenes-varias/geomembrana.webp" alt="Instalación de Geomembrana para Productividad Maximizada" class="img-responsive border-radius-sm" width="800" height="450" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                        <img src="img/imagenes-varias/geomembrana.webp" data-cms-img="prop_items.1.image" alt="Instalación de Geomembrana para Productividad Maximizada" class="img-responsive border-radius-sm" width="800" height="450" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
                     </div>
                     <div class="service-row-content">
-                        <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 2rem;">Productividad Maximizada</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6;">Diseño hidráulico y agronómico de precisión. Llevamos el agua justa en el momento exacto para maximizar el rinde y reducir mermas.</p>
+                        <h3 data-cms-text="prop_items.1.title" style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 2rem;">Productividad Maximizada</h3>
+                        <p data-cms-text="prop_items.1.description" style="font-size: 1.1rem; line-height: 1.6;">Diseño hidráulico y agronómico de precisión. Llevamos el agua justa en el momento exacto para maximizar el rinde y reducir mermas.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 3 -->
                 <div class="service-row" style="margin-bottom: 0;">
                     <div class="service-row-image">
-                        <img src="img/valor/propuesta-3.png" alt="Eficiencia del Recurso en Proyecto Hídrico" class="img-responsive border-radius-sm" width="800" height="450" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                        <img src="img/valor/propuesta-3.png" data-cms-img="prop_items.2.image" alt="Eficiencia del Recurso en Proyecto Hídrico" class="img-responsive border-radius-sm" width="800" height="450" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
                     </div>
                     <div class="service-row-content">
-                        <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 2rem;">Eficiencia y Experiencia</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6;">Soluciones de vanguardia que minimizan pérdidas por evaporación y filtración. Desde el asesoramiento técnico y permisos, hasta una obra ordenada y acompañamiento postventa.</p>
+                        <h3 data-cms-text="prop_items.2.title" style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 2rem;">Eficiencia y Experiencia</h3>
+                        <p data-cms-text="prop_items.2.description" style="font-size: 1.1rem; line-height: 1.6;">Soluciones de vanguardia que minimizan pérdidas por evaporación y filtración. Desde el asesoramiento técnico y permisos, hasta una obra ordenada y acompañamiento postventa.</p>
                     </div>
                 </div>
             </div>
@@ -150,8 +150,8 @@
         <section class="operational-support" style="background-color: var(--color-earth-dark); color: #fff; padding: var(--spacing-xl) 0;">
             <div class="container">
                 <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <h2 style="color: #fff; margin-bottom: var(--spacing-md);">Capacidad de Ejecución Integral</h2>
-                    <p style="font-size: 1.1rem; line-height: 1.8;">No dependemos de terceros para lo crítico. Contamos con un equipo técnico-operativo propio y una red de proveedores consolidados (geomembranas, riego, maquinaria). Nuestra experiencia abarca desde reservorios medianos hasta grandes obras civiles, facilitando además el acceso a líneas de financiamiento estratégico (Agro Nación, CFI, BICE, FTyC).</p>
+                    <h2 data-cms-text="op_title" style="color: #fff; margin-bottom: var(--spacing-md);">Capacidad de Ejecución Integral</h2>
+                    <p data-cms-text="op_text" style="font-size: 1.1rem; line-height: 1.8;">No dependemos de terceros para lo crítico. Contamos con un equipo técnico-operativo propio y una red de proveedores consolidados (geomembranas, riego, maquinaria). Nuestra experiencia abarca desde reservorios medianos hasta grandes obras civiles, facilitando además el acceso a líneas de financiamiento estratégico (Agro Nación, CFI, BICE, FTyC).</p>
                 </div>
             </div>
         </section>
@@ -159,36 +159,36 @@
         <!-- 4. Sección: Protocolos de Calidad y Mitigación de Riesgos -->
         <section class="quality-protocols" style="padding: var(--spacing-xl) 0;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Ingeniería de Riesgo Cero</h2>
+                <h2 data-cms-text="quality_title" style="text-align: center; margin-bottom: var(--spacing-lg);">Ingeniería de Riesgo Cero</h2>
                 <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="margin-bottom: var(--spacing-md); text-align: center;">Implementamos una rigurosa metodología de gestión operativa para garantizar que tu obra se ejecute sin contratiempos.</p>
+                    <p data-cms-text="quality_subtitle" style="margin-bottom: var(--spacing-md); text-align: center;">Implementamos una rigurosa metodología de gestión operativa para garantizar que tu obra se ejecute sin contratiempos.</p>
                     <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
                         <div style="display: flex; gap: 15px; align-items: flex-start; padding: var(--spacing-sm); border-bottom: 1px solid var(--color-gray-dark);">
                             <span style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">●</span>
                             <div>
-                                <strong style="display: block; margin-bottom: 0.2rem;">Calidad QA/QC</strong>
-                                <p style="font-size: 0.95rem;">Auditorías continuas con ensayos de vacío y canal de aire en uniones térmicas para garantizar impermeabilización absoluta.</p>
+                                <strong data-cms-text="quality_items.0.title" style="display: block; margin-bottom: 0.2rem;">Calidad QA/QC</strong>
+                                <p data-cms-text="quality_items.0.text" style="font-size: 0.95rem;">Auditorías continuas con ensayos de vacío y canal de aire en uniones térmicas para garantizar impermeabilización absoluta.</p>
                             </div>
                         </div>
                         <div style="display: flex; gap: 15px; align-items: flex-start; padding: var(--spacing-sm); border-bottom: 1px solid var(--color-gray-dark);">
                             <span style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">●</span>
                             <div>
-                                <strong style="display: block; margin-bottom: 0.2rem;">Seguridad Industrial H&S</strong>
-                                <p style="font-size: 0.95rem;">Estrictos planes de seguridad, capacitación continua, EPP y auditorías internas en cada frente de obra.</p>
+                                <strong data-cms-text="quality_items.1.title" style="display: block; margin-bottom: 0.2rem;">Seguridad Industrial H&S</strong>
+                                <p data-cms-text="quality_items.1.text" style="font-size: 0.95rem;">Estrictos planes de seguridad, capacitación continua, EPP y auditorías internas en cada frente de obra.</p>
                             </div>
                         </div>
                         <div style="display: flex; gap: 15px; align-items: flex-start; padding: var(--spacing-sm); border-bottom: 1px solid var(--color-gray-dark);">
                             <span style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">●</span>
                             <div>
-                                <strong style="display: block; margin-bottom: 0.2rem;">Logística y Clima</strong>
-                                <p style="font-size: 0.95rem;">Planificación inteligente con buffers de plazo, ventanas de obra controladas y acopio anticipado de insumos críticos.</p>
+                                <strong data-cms-text="quality_items.2.title" style="display: block; margin-bottom: 0.2rem;">Logística y Clima</strong>
+                                <p data-cms-text="quality_items.2.text" style="font-size: 0.95rem;">Planificación inteligente con buffers de plazo, ventanas de obra controladas y acopio anticipado de insumos críticos.</p>
                             </div>
                         </div>
                         <div style="display: flex; gap: 15px; align-items: flex-start; padding: var(--spacing-sm);">
                             <span style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">●</span>
                             <div>
-                                <strong style="display: block; margin-bottom: 0.2rem;">Gestión Documental</strong>
-                                <p style="font-size: 0.95rem;">Cronogramas de trámites previos y check-lists documentales exhaustivos antes de la movilización de maquinaria.</p>
+                                <strong data-cms-text="quality_items.3.title" style="display: block; margin-bottom: 0.2rem;">Gestión Documental</strong>
+                                <p data-cms-text="quality_items.3.text" style="font-size: 0.95rem;">Cronogramas de trámites previos y check-lists documentales exhaustivos antes de la movilización de maquinaria.</p>
                             </div>
                         </div>
                     </div>
@@ -201,28 +201,28 @@
             <div class="container">
                 <div class="service-row" style="margin-bottom: 0;">
                     <div class="service-row-content">
-                        <h2 style="margin-bottom: var(--spacing-md); font-size: 2.5rem;">Gestión Ambiental Responsable</h2>
+                        <h2 data-cms-text="env_title" style="margin-bottom: var(--spacing-md); font-size: 2.5rem;">Gestión Ambiental Responsable</h2>
                         <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-md); margin-top: 0;">
                             <li style="position: relative; padding-left: 1.5rem;">
                                 <span style="position: absolute; left: 0; color: var(--color-primary);">→</span>
-                                <strong style="color: var(--color-primary);">Suelos:</strong> Control estricto de erosión y sedimentos, con recomposición topográfica de áreas de préstamo.
+                                <strong data-cms-text="env_items.0.title" style="color: var(--color-primary);">Suelos:</strong> <span data-cms-text="env_items.0.text">Control estricto de erosión y sedimentos, con recomposición topográfica de áreas de préstamo.</span>
                             </li>
                             <li style="position: relative; padding-left: 1.5rem;">
                                 <span style="position: absolute; left: 0; color: var(--color-primary);">→</span>
-                                <strong style="color: var(--color-primary);">Agua:</strong> Protección absoluta de cursos naturales, verificación de permisos hídricos y planes de contingencia.
+                                <strong data-cms-text="env_items.1.title" style="color: var(--color-primary);">Agua:</strong> <span data-cms-text="env_items.1.text">Protección absoluta de cursos naturales, verificación de permisos hídricos y planes de contingencia.</span>
                             </li>
                             <li style="position: relative; padding-left: 1.5rem;">
                                 <span style="position: absolute; left: 0; color: var(--color-primary);">→</span>
-                                <strong style="color: var(--color-primary);">Emisiones:</strong> Riego sistemático de caminos, control de horarios operativos y mantenimiento de maquinaria.
+                                <strong data-cms-text="env_items.2.title" style="color: var(--color-primary);">Emisiones:</strong> <span data-cms-text="env_items.2.text">Riego sistemático de caminos, control de horarios operativos y mantenimiento de maquinaria.</span>
                             </li>
                             <li style="position: relative; padding-left: 1.5rem;">
                                 <span style="position: absolute; left: 0; color: var(--color-primary);">→</span>
-                                <strong style="color: var(--color-primary);">Residuos:</strong> Gestión circular de recortes de geomembrana y envases con disposición final certificada.
+                                <strong data-cms-text="env_items.3.title" style="color: var(--color-primary);">Residuos:</strong> <span data-cms-text="env_items.3.text">Gestión circular de recortes de geomembrana y envases con disposición final certificada.</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-row-image">
-                        <img src="img/imagenes-varias/finca-seca.webp" alt="Finca mostrando Gestión Ambiental y Restauración de Suelos" class="img-responsive border-radius-sm" width="800" height="500" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                        <img src="img/imagenes-varias/finca-seca.webp" data-cms-img="env_img" alt="Finca mostrando Gestión Ambiental y Restauración de Suelos" class="img-responsive border-radius-sm" width="800" height="500" loading="lazy" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
                     </div>
                 </div>
             </div>
@@ -303,5 +303,6 @@
             }
         }
     </script>
+    <script src="/js/cms-core.js" defer></script>
 </body>
 </html>

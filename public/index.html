@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -50,12 +50,12 @@
         <!-- Componente: Hero -->
         <section class="hero" id="inicio">
             <div class="hero-bg">
-                <img src="img/index/principal.webp" alt="Ingeniería Hídrica Roots - Obras de Gran Escala" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="img/index/principal.webp" data-cms-img="hero_bg" alt="Ingeniería Hídrica Roots - Obras de Gran Escala" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="hero-content container">
-                <h1>Ingeniería Hídrica de Precisión y Movimiento de Suelos</h1>
-                <p>Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos.</p>
-                <a href="contacto.html" class="btn btn-primary">Iniciá tu proyecto</a>
+                <h1 data-cms-text="hero_title">Ingeniería Hídrica de Precisión y Movimiento de Suelos</h1>
+                <p data-cms-text="hero_subtitle">Soluciones corporativas de alta eficiencia para el desarrollo agrícola y la gestión estratégica de recursos.</p>
+                <a href="contacto.html" class="btn btn-primary" data-cms-text="hero_btn_text">Iniciá tu proyecto</a>
             </div>
         </section>
 
@@ -63,8 +63,8 @@
         <section class="calculator-section" style="padding: var(--spacing-xl) 0; background-color: var(--color-gray-light);">
             <div class="container">
                 <div style="text-align: center; margin-bottom: var(--spacing-lg);">
-                    <h2>Proyectá tu reservorio en segundos</h2>
-                    <p>Utilizá nuestra herramienta de estimación rápida para conocer el volumen y las dimensiones ideales para tu cultivo.</p>
+                    <h2 data-cms-text="calc_title">Proyectá tu reservorio en segundos</h2>
+                    <p data-cms-text="calc_subtitle">Utilizá nuestra herramienta de estimación rápida para conocer el volumen y las dimensiones ideales para tu cultivo.</p>
                 </div>
                 
                 <div class="calculator-grid">
@@ -126,12 +126,12 @@
             <div class="container">
                 <div class="grid-3-col">
                     <article class="value-card">
-                        <h3>Disponibilidad de Agua</h3>
-                        <p>Aseguramos el recurso hídrico vital para tu productividad constante mediante el diseño de reservorios estratégicos.</p>
+                        <h3 data-cms-text="info_title_1">Disponibilidad de Agua</h3>
+                        <p data-cms-text="info_text_1">Aseguramos el recurso hídrico vital para tu productividad constante mediante el diseño de reservorios estratégicos.</p>
                     </article>
                     <article class="value-card">
-                        <h3>Productividad Agrícola</h3>
-                        <p>Diseñamos sistemas de riego inteligente que maximizan el rendimiento por hectárea y la eficiencia en insumos.</p>
+                        <h3 data-cms-text="info_title_2">Productividad Agrícola</h3>
+                        <p data-cms-text="info_text_2">Diseñamos sistemas de riego inteligente que maximizan el rendimiento por hectárea y la eficiencia en insumos.</p>
                     </article>
                     <article class="value-card">
                         <h3>Resiliencia Corporativa</h3>
@@ -212,9 +212,9 @@
         <!-- CTA Final -->
         <section class="final-cta" style="text-align: center; padding: var(--spacing-xl) 0; background-color: var(--color-gray-light);">
             <div class="container">
-                <h2 style="font-size: 3rem; margin-bottom: var(--spacing-md);">¿Listo para potenciar tu producción?</h2>
-                <p style="margin-bottom: var(--spacing-lg); font-size: 1.2rem;">Hablá con nuestros ingenieros y recibí una propuesta técnica adaptada a tus necesidades.</p>
-                <a href="contacto.html" class="btn btn-primary" style="padding: 1.5rem 3rem; font-size: 1.2rem;">Solicitar Cotización</a>
+                <h2 data-cms-text="cta_title" style="font-size: 3rem; margin-bottom: var(--spacing-md);">¿Listo para potenciar tu producción?</h2>
+                <p data-cms-text="cta_subtitle" style="margin-bottom: var(--spacing-lg); font-size: 1.2rem;">Hablá con nuestros ingenieros y recibí una propuesta técnica adaptada a tus necesidades.</p>
+                <a href="contacto.html" class="btn btn-primary" data-cms-text="cta_btn_text" style="padding: 1.5rem 3rem; font-size: 1.2rem;">Solicitar Cotización</a>
             </div>
         </section>
     </main>
@@ -291,5 +291,6 @@
             calcularReservorio();
         });
     </script>
+    <script src="/js/cms-core.js" defer></script>
 </body>
 </html>

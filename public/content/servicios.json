@@ -1,0 +1,12 @@
+{
+  "hero_title": "Ingeniería Hídrica y Desarrollo de Terrenos",
+  "hero_subtitle": "Soluciones de infraestructura robusta y precisión técnica. Transformamos los desafíos del territorio en rentabilidad operativa para el sector agrícola e industrial.",
+  "items": [
+    {"title": "Construcción de Reservorios Agrícolas", "description": "Diseñamos y ejecutamos represas a medida para asegurar la disponibilidad de agua los 365 días del año. Nuestra ingeniería contempla el cálculo volumétrico exacto según las necesidades de tu cultivo, garantizando una reserva estratégica contra cortes de turno y variaciones climáticas.", "image": "/img/servicios/reservorio-agricola.webp"},
+    {"title": "Impermeabilización con Geomembrana", "description": "Blindamos tu inversión hídrica. Aplicamos barreras sintéticas de polietileno de alta densidad (PEAD) mediante termofusión de precisión. Realizamos ensayos de calidad (QA/QC) con pruebas de vacío y canal de aire para garantizar cero filtraciones y máxima durabilidad.", "image": "/img/servicios/impermeabilizacion.webp"},
+    {"title": "Movimiento de Suelo y Nivelación", "description": "Preparación topográfica de alta precisión. Contamos con maquinaria pesada propia para ejecutar excavaciones, terraplenes y nivelación de terrenos, asegurando las pendientes y bases estructurales óptimas para tus proyectos agronómicos o civiles.", "image": "/img/servicios/nivelacion.webp"},
+    {"title": "Desmontes y Limpieza de Terrenos", "description": "Ampliamos tus fronteras productivas de manera eficiente y controlada. Realizamos la apertura de nuevas áreas para cultivo o infraestructura mediante maquinaria especializada, asegurando un despeje rápido y la correcta disposición del material vegetal.", "image": "/img/imagenes-varias/maquina.webp"},
+    {"title": "Sistemas de Riego Tecnificado", "description": "Maximizamos la productividad de cada gota. Instalamos sistemas de riego por goteo y aspersión que incluyen el diseño de cabezales, filtrado, bombeo y fertirriego. Llevamos el agua y los nutrientes exactos directo a la raíz de tu cultivo.", "image": "/img/imagenes-varias/finca-verde.webp"},
+    {"title": "Obras Hidráulicas y Complementarias", "description": "Desarrollamos infraestructura mayor para la conducción y control del agua. Construimos canales, sistemas de drenaje, estructuras de captación (tomas), by-pass y compuertas, asegurando un manejo integral y seguro de los caudales en tu propiedad.", "image": "/img/imagenes-varias/reservorio-aereo.webp"}
+  ]
+}

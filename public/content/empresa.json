@@ -1,0 +1,38 @@
+{
+  "hero_title": "Ingeniería Hídrica y de Suelos en Mendoza",
+  "hero_subtitle": "Roots diseña y ejecuta infraestructura estratégica para clientes públicos y privados. Desde reservorios de agua impermeabilizados hasta obras civiles complementarias, resolvemos los tres desafíos críticos del territorio: disponibilidad constante del recurso, máxima productividad agrícola y resiliencia operativa ante contingencias climáticas.",
+  "history_title": "Evolución Estratégica en el Terreno",
+  "history_text_1": "Nacimos en el corazón productivo de Cuyo como especialistas en reservorios agrícolas y sistemas de riego. Entendiendo las exigencias de un entorno dinámico, expandimos nuestra capacidad operativa integrando obras civiles y mantenimiento integral.",
+  "history_text_2": "Hoy, respaldados por una sólida red de proveedores de tecnología hídrica (geomembranas, válvulas, bombeo) y entidades financieras, contamos con un portafolio que abarca desde casos emblemáticos en viñedos y berries, hasta complejas infraestructuras industriales y gubernamentales.",
+  "history_quote": "\"Más que construir reservorios, blindamos la matriz productiva de la región con ingeniería de precisión.\"",
+  "history_img": "/img/empresa/historia.png",
+  "mission_title": "Misión",
+  "mission_text": "Construir infraestructura hídrica confiable que potencie la matriz productiva y respete el paisaje, operando con los más altos estándares de seguridad, eficiencia y un servicio cercano al cliente.",
+  "mission_bg": "/img/empresa/mision.png",
+  "vision_title": "Visión",
+  "vision_text": "Ser la firma de ingeniería de referencia en la región para reservorios y soluciones integrales de riego, reconocidos indiscutiblemente por nuestra calidad de ejecución, cumplimiento de plazos y excelencia en postventa.",
+  "vision_bg": "/img/empresa/vision.png",
+  "prop_title": "Por qué elegir Roots",
+  "prop_items": [
+    {"title": "Agua Asegurada", "text": "Reducimos tu dependencia de los turnos de agua o cortes de suministro mediante reservorios impermeabilizados de alta capacidad."},
+    {"title": "Productividad", "text": "Aplicamos diseño hidráulico y agronómico de precisión para maximizar tus rindes y minimizar mermas operativas."},
+    {"title": "Eficiencia del Recurso", "text": "Implementamos soluciones tecnológicas que anulan las pérdidas por evaporación y filtración, optimizando cada caudal."},
+    {"title": "Experiencia Integral", "text": "Garantizamos una obra ordenada con entregas en plazo, gestionando desde los permisos iniciales hasta el mantenimiento preventivo."}
+  ],
+  "diff_title": "Ventaja Operativa \"Llave en Mano\"",
+  "diff_items": [
+    {"text": "Ejecución integral y velocidad de obra optimizada."},
+    {"text": "Calidad premium en materiales de impermeabilización y terminaciones civiles."},
+    {"text": "Asistencia técnica para el acceso a líneas de financiamiento estratégico (Agro Nación, PyME Nación, CFI, BICE, Fondo de la Transformación)."},
+    {"text": "Acompañamiento postventa estructurado con planes de mantenimiento preventivo."}
+  ],
+  "team_title": "Capacidad Operativa y Técnica",
+  "team_subtitle": "Detrás de cada proyecto exitoso existe una estructura organizacional diseñada para la precisión y la eficiencia en el terreno.",
+  "team_items": [
+    {"title": "Dirección", "text": "Conducción general, estrategia corporativa y desarrollo comercial."},
+    {"title": "Ingeniería y Topografía", "text": "Relevamientos de precisión, cubicaciones y desarrollo de memorias técnicas."},
+    {"title": "Jefatura de Obra", "text": "Planificación milimétrica, protocolos de seguridad e higiene, y control de calidad in situ."},
+    {"title": "Operaciones en Terreno", "text": "Flota de operadores de maquinaria pesada, cuadrillas especializadas y logística."},
+    {"title": "Admin. y Finanzas", "text": "Gestión de costos, optimización de cadena de suministro y articulación de herramientas de financiamiento."}
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "hero_title": "El Valor de la Ingeniería Estratégica",
+  "hero_subtitle": "Frente a la escasez hídrica y la variabilidad climática, el almacenamiento inteligente y la eficiencia ya no son opciones, son imperativos. En Roots, transformamos el desafío del territorio en rentabilidad asegurada para tu negocio.",
+  "works_title": "Ingeniería en Acción: Obras que Transforman el Territorio",
+  "works_items": [
+    {
+      "title": "Reservorio Agrícola de Gran Escala",
+      "location": "Valle de Uco, Mendoza",
+      "capacity": "50.000 m3",
+      "desc": "Impermeabilización integral con geomembrana PEAD de 1.5mm. El proyecto incluyó topografía, movimiento de suelos, compactación y obras civiles de ingreso/egreso de agua.",
+      "impact": "Antes: Pérdidas por infiltración del 35%. Después: Retención hídrica del 100% y automatización de llenado.",
+      "image": "/img/imagenes-varias/reservorio-lleno.webp"
+    },
+    {
+      "title": "Sistema de Riego Tecnificado y Fertirriego",
+      "location": "Luján de Cuyo",
+      "capacity": "120 Hectáreas",
+      "desc": "Diseño e instalación de riego por goteo compensado. Incluye automatización de válvulas y sistema de inyección de nutrientes.",
+      "impact": "Antes: Riego por manto con baja eficiencia. Después: Incremento del 40% en rendimiento y ahorro del 60% en agua.",
+      "image": "/img/imagenes-varias/finca.webp"
+    },
+    {
+      "title": "Movimiento de Suelos para Infraestructura Industrial",
+      "location": "San Rafael",
+      "capacity": "200.000 m3 movidos",
+      "desc": "Nivelación láser de precisión y ejecución de bases estructurales para planta de procesamiento agroindustrial. Construcción de caminos internos.",
+      "impact": "Aseguramiento de estabilidad estructural y cumplimiento de tolerancias milimétricas en plazos reducidos.",
+      "image": "/img/imagenes-varias/reservorio-construccion.webp"
+    }
+  ],
+  "prop_title": "Infraestructura que Asegura Rentabilidad",
+  "prop_items": [
+    {"title": "Agua Asegurada", "description": "Reservorios impermeabilizados de alta tecnología que eliminan la dependencia de los turnos de agua y blindan tu producción frente a cortes de suministro.", "image": "/img/imagenes-varias/reservorio-vacio.webp"},
+    {"title": "Productividad Maximizada", "description": "Diseño hidráulico y agronómico de precisión. Llevamos el agua justa en el momento exacto para maximizar el rinde y reducir mermas.", "image": "/img/imagenes-varias/geomembrana.webp"},
+    {"title": "Eficiencia y Experiencia", "description": "Soluciones de vanguardia que minimizan pérdidas por evaporación y filtración. Desde el asesoramiento técnico y permisos, hasta una obra ordenada y acompañamiento postventa.", "image": "/img/valor/propuesta-3.png"}
+  ],
+  "op_title": "Capacidad de Ejecución Integral",
+  "op_text": "No dependemos de terceros para lo crítico. Contamos con un equipo técnico-operativo propio y una red de proveedores consolidados (geomembranas, riego, maquinaria). Nuestra experiencia abarca desde reservorios medianos hasta grandes obras civiles, facilitando además el acceso a líneas de financiamiento estratégico (Agro Nación, CFI, BICE, FTyC).",
+  "quality_title": "Ingeniería de Riesgo Cero",
+  "quality_subtitle": "Implementamos una rigurosa metodología de gestión operativa para garantizar que tu obra se ejecute sin contratiempos.",
+  "quality_items": [
+    {"title": "Calidad QA/QC", "text": "Auditorías continuas con ensayos de vacío y canal de aire en uniones térmicas para garantizar impermeabilización absoluta."},
+    {"title": "Seguridad Industrial H&S", "text": "Estrictos planes de seguridad, capacitación continua, EPP y auditorías internas en cada frente de obra."},
+    {"title": "Logística y Clima", "text": "Planificación inteligente con buffers de plazo, ventanas de obra controladas y acopio anticipado de insumos críticos."},
+    {"title": "Gestión Documental", "text": "Cronogramas de trámites previos y check-lists documentales exhaustivos antes de la movilización de maquinaria."}
+  ],
+  "env_title": "Gestión Ambiental Responsable",
+  "env_items": [
+    {"title": "Suelos", "text": "Control estricto de erosión y sedimentos, con recomposición topográfica de áreas de préstamo."},
+    {"title": "Agua", "text": "Protección absoluta de cursos naturales, verificación de permisos hídricos y planes de contingencia."},
+    {"title": "Emisiones", "text": "Riego sistemático de caminos, control de horarios operativos y mantenimiento de maquinaria."},
+    {"title": "Residuos", "text": "Gestión circular de recortes de geomembrana y envases con disposición final certificada."}
+  ],
+  "env_img": "/img/imagenes-varias/finca-seca.webp"
+}
