@@ -59,22 +59,22 @@
                         
                         <div style="margin-bottom: 1rem;">
                             <strong style="color: var(--color-primary); display: block;">Teléfono Directo:</strong>
-                            <a href="https://wa.me/5492617533375" data-cms-text="phone" style="text-decoration: underline; color: inherit;">+54 9 261 555 1234</a>
+                            <a href="https://wa.me/5492617533375" data-cms-text="phone" style="text-decoration: underline; color: inherit;">2617533375</a>
                         </div>
                         
                         <div style="margin-bottom: 1rem;">
                             <strong style="color: var(--color-primary); display: block;">Email Corporativo:</strong>
-                            <a data-cms-text="email" href="mailto:roots.mza@gmail.com" style="text-decoration: underline;">operaciones@rootsingenieria.com</a>
+                            <a data-cms-text="email" href="mailto:roots.mza@gmail.com" style="text-decoration: underline;">roots.mza@gmail.com</a>
                         </div>
                         
                         <div style="margin-bottom: 1rem;">
                             <strong style="color: var(--color-primary); display: block;">Sede Central:</strong>
-                            <span data-cms-text="address">Parque Tecnológico Industrial<br>Mendoza, Argentina.</span>
+                            <span data-cms-text="address">Mendoza, Argentina</span>
                         </div>
                         
                         <div>
                             <strong style="color: var(--color-primary); display: block;">Horario de Atención:</strong>
-                            <span data-cms-text="hours">Lunes a Viernes, de 08:00 a 17:00 hs.</span>
+                            <span data-cms-text="hours">Lunes a viernes de 9:00 a 18:00 hs. Sábados y domingos cerrado.</span>
                         </div>
 
                         <!-- NUEVA SECCIÓN: Nuestras Redes -->
@@ -102,7 +102,7 @@
                             <strong data-cms-text="form_badge_title" style="color: var(--color-primary); display: block; margin-bottom: 0.3rem;">✓ Asesoramiento Financiero Incluido</strong>
                             <span data-cms-text="form_badge_text" style="font-size: 0.9rem; color: #444;">Consultá por nuestras opciones de financiación en hasta 36 meses con Agro Nación, PyME Nación y FTyC.</span>
                         </div>
-                        <form class="quote-form" action="#" method="POST">
+                        <form class="quote-form" action="#" method="POST" id="contactForm">
                             <div class="form-group-full">
                                 <label for="nombre_contacto" class="form-label">Nombre Completo</label>
                                 <input type="text" id="nombre_contacto" name="nombre_contacto" class="form-control" required>
@@ -150,6 +150,30 @@
 
             mobileToggle.addEventListener('click', toggleMenu);
             menuOverlay.addEventListener('click', toggleMenu);
+        });
+
+        // Script para redirección de Formulario a WhatsApp
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Evita que recargue la página
+                    
+                    const nombre = document.getElementById('nombre_contacto').value;
+                    const email = document.getElementById('email_contacto').value;
+                    const asunto = document.getElementById('asunto').value;
+                    const mensaje = document.getElementById('mensaje').value;
+                    
+                    // Construir el mensaje de WhatsApp codificando los saltos de línea y el texto
+                    const textoWs = `¡Hola Roots Ingeniería!%0A%0AMi nombre es ${encodeURIComponent(nombre)}.%0A%0A*Asunto:* ${encodeURIComponent(asunto)}%0A*Email:* ${encodeURIComponent(email)}%0A*Mensaje:* ${encodeURIComponent(mensaje)}`;
+                    
+                    // URL de la API de WhatsApp con el número oficial
+                    const urlWhatsApp = `https://wa.me/5492617533375?text=${textoWs}`;
+                    
+                    // Redirigir a WhatsApp en nueva pestaña
+                    window.open(urlWhatsApp, '_blank');
+                });
+            }
         });
     </script>
     <script src="/js/cms-core.js" defer></script>
