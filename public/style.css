@@ -1172,39 +1172,43 @@ textarea.form-control {
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 
-/* --- Carrusel Móvil (Mobile Swipeable Cards) --- */
+/* --- Sticky Stacking Cards (Apilamiento Vertical) --- */
 @media (max-width: 768px) {
-  /* Contenedor principal */
-  .mobile-carousel-container {
+  .sticky-cards-wrapper {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 15px;
-    padding-bottom: 20px; /* Espacio para la sombra */
-    padding-left: 20px; /* Margen inicial */
-    padding-right: 20px;
-    margin-left: -20px; /* Compensación para sangría completa */
-    margin-right: -20px;
-    
-    /* Scroll Snap para efecto magnético */
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 20px;
-    -webkit-overflow-scrolling: touch;
-    
-    /* Ocultar barra de scroll para estética de App */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .mobile-carousel-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    /* IMPORTANTE: El contenedor padre directo y el body no deben tener overflow: hidden */
   }
 
-  /* Tarjetas individuales */
-  .mobile-carousel-container > * {
-    flex: 0 0 85%; /* Las tarjetas ocupan el 85% de la pantalla para mostrar un asomo de la siguiente */
-    scroll-snap-align: start;
-    min-width: 280px;
+  .sticky-card {
+    position: sticky;
+    z-index: 1;
+    background-color: #fff; /* Fallback de fondo sólido */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.08); /* Sombra superior para separar visualmente las capas */
+    transition: transform 0.3s ease;
   }
+
+  /* Asegurar el color de fondo correcto de cada tarjeta para evitar transparencias */
+  .value-card.sticky-card {
+    background-color: var(--color-earth-light);
+  }
+  .finance-item.sticky-card {
+    background-color: var(--color-gray-light);
+  }
+  .team-areas .sticky-card {
+    background-color: var(--color-primary);
+  }
+
+  /* Desfase visual para dar efecto de profundidad y escalonamiento al apilarse */
+  .sticky-card:nth-child(1) { top: 90px; z-index: 1; }
+  .sticky-card:nth-child(2) { top: 100px; z-index: 2; }
+  .sticky-card:nth-child(3) { top: 110px; z-index: 3; }
+  .sticky-card:nth-child(4) { top: 120px; z-index: 4; }
+  .sticky-card:nth-child(5) { top: 130px; z-index: 5; }
+  .sticky-card:nth-child(6) { top: 140px; z-index: 6; }
+  .sticky-card:nth-child(n+7) { top: 150px; z-index: 7; }
 }
+
 
