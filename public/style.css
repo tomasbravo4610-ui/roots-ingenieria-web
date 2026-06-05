@@ -1171,3 +1171,40 @@ textarea.form-control {
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
+
+/* --- Carrusel Móvil (Mobile Swipeable Cards) --- */
+@media (max-width: 768px) {
+  /* Contenedor principal */
+  .mobile-carousel-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    padding-bottom: 20px; /* Espacio para la sombra */
+    padding-left: 20px; /* Margen inicial */
+    padding-right: 20px;
+    margin-left: -20px; /* Compensación para sangría completa */
+    margin-right: -20px;
+    
+    /* Scroll Snap para efecto magnético */
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Ocultar barra de scroll para estética de App */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .mobile-carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  /* Tarjetas individuales */
+  .mobile-carousel-container > * {
+    flex: 0 0 85%; /* Las tarjetas ocupan el 85% de la pantalla para mostrar un asomo de la siguiente */
+    scroll-snap-align: start;
+    min-width: 280px;
+  }
+}
+
